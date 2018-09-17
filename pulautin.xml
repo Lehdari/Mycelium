@@ -7,7 +7,7 @@
 		<macro name="CMAKE_VERSION" value="2.8"/>
 		<macro name="CXX_STANDARD" value="17"/>
 
-		<macro name="LIBRARY_NAME" value="Minimal"/>
+		<macro name="LIBRARY_NAME" value="mycelium"/>
 
 		<macro name="HEADERS_DIR" value="include"/>
 		<macro name="SOURCES_DIR" value="src"/>
@@ -19,7 +19,8 @@
 		<!-- Top-level CMakeLists -->
 		<file name="CMakeLists.txt">
 			<section template="cmake/header"/>
-			<section template="cmake/executable"/>
+			<section template="cmake/library_shared"/>
+			<section template="cmake/eigen"/>
 		</file>
 
 		<!-- CMakeLists for headers -->
