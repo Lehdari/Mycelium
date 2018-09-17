@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<config>
+	</config>
+	
+	<macros>
+		<macro name="CMAKE_VERSION" value="2.8"/>
+		<macro name="CXX_STANDARD" value="17"/>
+
+		<macro name="LIBRARY_NAME" value="Minimal"/>
+
+		<macro name="HEADERS_DIR" value="include"/>
+		<macro name="SOURCES_DIR" value="src"/>
+		<macro name="HEADERS_VAR" value="LIBRARY_HEADERS"/>
+		<macro name="SOURCES_VAR" value="LIBRARY_SOURCES"/>
+	</macros>
+	
+	<files>
+		<!-- Top-level CMakeLists -->
+		<file name="CMakeLists.txt">
+			<section template="cmake/header"/>
+			<section template="cmake/executable"/>
+		</file>
+
+		<!-- CMakeLists for headers -->
+		<file name="include/CMakeLists.txt">
+			<section template="cmake/add_subdirectory_headers"/>
+		</file>
+
+		<!-- CMakeLists for sources -->
+		<file name="src/CMakeLists.txt">
+			<section template="cmake/add_subdirectory_sources"/>
+		</file>
+	</files>
+</project>
