@@ -1,3 +1,3 @@
 # Mycelium 
 
-This project is generated from Lehdari's minimal C++ library template.
+Mycelium is my general-purpose library for all recyclable code I've created.
