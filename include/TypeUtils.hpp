@@ -18,6 +18,7 @@ namespace mm {
         static std::vector<T> value;
     };
 
+    /// Specializations for Eigen fixed-size vectorizable types
     template<>
     struct VectorType<Vec2f> {
         static std::vector<Vec2f, Eigen::aligned_allocator<Vec2f>> value;
