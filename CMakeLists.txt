@@ -13,5 +13,10 @@ add_library(mycelium SHARED ${LIBRARY_HEADERS} ${LIBRARY_SOURCES})
 target_include_directories(mycelium PUBLIC include)
 
 #Add Eigen include directory
-include_directories( "$ENV{EIGEN3_INCLUDE_DIR}" )
+find_package(Eigen3 REQUIRED)
 
+if(NOT EIGEN3_INCLUDE_DIR)
+    set(EIGEN3_INCLUDE_DIR "$ENV{EIGEN3_INCLUDE_DIR}")
+endif()
+
+target_include_directories(mycelium PUBLIC ${EIGEN3_INCLUDE_DIR})
